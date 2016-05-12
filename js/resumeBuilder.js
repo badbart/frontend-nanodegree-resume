@@ -64,7 +64,7 @@ var projects = {
     "projects": [
         {
             "title": "My Resume",
-            "dates": 2016,
+            "dates": "2016",
             "description": "Resume for Udacity, this one",
             "images": [
                 "images/resume.png",
@@ -72,7 +72,7 @@ var projects = {
         },
         {
             "title": "My Portfolio",
-            "dates": 2016,
+            "dates": "2016",
             "description": "Portfolio for Udacity",
             "images": [
                 "images/portfolio.jpg",
@@ -94,8 +94,7 @@ bio.display = function () {
         HTMLemail.replace("%data%", mailFontLogo + bio.contacts.email) +
         HTMLgithub.replace("%data%", gitHubFontLogo + bio.contacts.github) +
         HTMLlocation.replace("%data%", mapFontLogo + bio.contacts.location);
-    $("#topContacts").append(contacts);
-    $("#footerContacts").append(contacts);
+    $("#topContacts, #footerContacts").append(contacts);
 
     var picAndMessage = HTMLbioPic.replace("%data%", bio.biopic) + HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(picAndMessage);
@@ -185,6 +184,7 @@ education.display = function () {
 
 
 function displayPage() {
+    "use strict";
     bio.display();
     education.display();
     projects.display();
