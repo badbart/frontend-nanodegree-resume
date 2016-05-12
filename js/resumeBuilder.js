@@ -85,10 +85,15 @@ bio.display = function () {
     var header = HTMLheaderName.replace("%data%", bio.name) + HTMLheaderRole.replace("%data%", bio.role);
     $("#header").prepend(header);
 
-    var contacts = HTMLmobile.replace("%data%", bio.contacts.mobile) +
-        HTMLemail.replace("%data%", bio.contacts.email) +
-        HTMLgithub.replace("%data%", bio.contacts.github) +
-        HTMLlocation.replace("%data%", bio.contacts.location);
+    var gitHubFontLogo = "<i class='fa fa-github' aria-hidden='true'></i> ";
+    var mapFontLogo = "<i class='fa fa-map' aria-hidden='true'></i>  ";
+    var mailFontLogo = "<i class='fa fa-envelope' aria-hidden='true'></i> ";
+    var mobileFontLogo = "<i class='fa fa-mobile' aria-hidden='true'></i> ";
+
+    var contacts = HTMLmobile.replace("%data%", mobileFontLogo + bio.contacts.mobile) +
+        HTMLemail.replace("%data%", mailFontLogo + bio.contacts.email) +
+        HTMLgithub.replace("%data%", gitHubFontLogo + bio.contacts.github) +
+        HTMLlocation.replace("%data%", mapFontLogo + bio.contacts.location);
     $("#topContacts").append(contacts);
     $("#footerContacts").append(contacts);
 
@@ -105,11 +110,6 @@ bio.display = function () {
 
 
     $("#skills").append(skills);
-
-    // Because on the Image it looks like this and changing it directly in CSS would
-    // be to easy
-    $("#skills").css("flex-direction", "column");
-
 
 };
 

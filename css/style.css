@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #2eb2e8;
   line-height: 48px;
   display: inline;
 }
@@ -86,7 +86,7 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #c33511;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -102,6 +102,10 @@ a {
 #skills-h3 {
   color: #f5ae23;
   display: none;
+}
+
+#skills {
+  flex-direction: column;
 }
 
 .orange {
