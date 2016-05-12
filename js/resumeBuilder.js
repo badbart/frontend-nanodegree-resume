@@ -90,6 +90,7 @@ bio.display = function () {
         HTMLgithub.replace("%data%", bio.contacts.github) +
         HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(contacts);
+    $("#footerContacts").append(contacts);
 
     var picAndMessage = HTMLbioPic.replace("%data%", bio.biopic) + HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(picAndMessage);
