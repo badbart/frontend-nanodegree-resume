@@ -35,7 +35,7 @@ var education = {
         {
             "title": "FED Nanodegree",
             "school": "Udacity",
-            "date": 2016,
+            "date": "2016",
             "url": "http://www.udacity.com"
         }
     ]
